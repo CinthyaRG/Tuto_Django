@@ -2,13 +2,14 @@ $(document).ready(function(){
     $("button").click(function(){
         $.ajax(
             {
-                url: "/Home2/",
-                success: function(data){
-                    $("#div_result").html(data);
+                url: "Home",
+                success: function(result){
+                    $("#div_result").html(result);
+                    console.log("Sucess");
                 },
-                error: function(data){
-                    alert(data);
+                error: function(result){
                     $("#div_result").html("ERROR");
+                    console.log("Error");
                 }
             });
         });
