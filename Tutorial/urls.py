@@ -3,9 +3,11 @@ from Tutorial.views import *
 
 urlpatterns = [
     url(
-        r'^home/',
+        r'^$',
         Home.as_view(),
-        name='home'
-    ),
-
+        name='home'),
+    url(
+        r'^Home2$',
+        HomeExtra.as_view(),
+        name='home2'),
 ]
