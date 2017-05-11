@@ -7,7 +7,11 @@ urlpatterns = [
         Home.as_view(),
         name='home'),
     url(
-        r'^Home$',
+        r'^registro$',
+        Registro.as_view(),
+        name='registro'),
+    url(
+        r'^resultado$',
         HomeExtra.as_view(),
-        name='home2'),
+        name='resultado'),
 ]

@@ -78,3 +78,17 @@ footer {
 	margin-left: 90px;
 	padding: 0px;
 }
+
+#tabla {
+	background-color: mediumaquamarine;
+	font-size: 20px;
+	margin: 20px;
+	padding: 10px;
+	text-align: center;
+}
+
+a:hover {
+	background-color: aquamarine;
+	text-decoration: none;
+	padding: 10px;
+}

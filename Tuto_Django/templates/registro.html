@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+    {% block script %}
+    {% endblock %}
+
+    {% block content %}
+
+        <h1> Datos de Usuario </h1>
+
+        <form action="" method=POST>
+            {% csrf_token %}
+
+            <div class="row">
+                {% for field in form %}
+
+                    <div>
+                        <label>{{ field.label }}</label>
+                        <span>{{ field }}</span>
+                    </div>
+
+                {% endfor %}
+
+                <div id="div_result">
+
+                </div>
+
+            </div>
+
+            <button id="id_submit" name="button" type="submit"> Enviar Datos </button>
+
+        </form>
+
+    {% endblock %}

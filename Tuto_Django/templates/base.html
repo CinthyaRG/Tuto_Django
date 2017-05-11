@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+{% load static %}
+
+<head>
+	<title> Tutorial Django </title>
+    <link href="{% static 'bootstrap-3.3.7-dist/css/bootstrap.min.css' %}" rel="stylesheet">
+    <link href="{% static 'bootstrap-3.3.7-dist/css/bootstrap.css' %}" rel="stylesheet">
+    <link href="{% static 'css/style.css' %}" rel="stylesheet">
+    <link href="../static/css/style.css" rel="stylesheet">
+    <script type="text/javascript" src="../static/js/jquery-3.2.1.min.js"></script>
+    {% block script %}
+    {% comment %}<script type="text/javascript" src="../static/js/ajax.js"></script>{% endcomment %}
+    <script type="text/javascript" src="../static/js/ajax2.js"></script>
+    {% endblock %}
+</head>
+
+<body>
+
+	<div class="container-fluid">
+
+        {% block content %}
+
+            <div class="row" id="tabla">
+
+                <div class="col-md-4">
+                    <a href="#" id="test-ajax"> Pruebame! </a>
+                </div>
+                <div class="col-md-4">
+                    <a href="{% url 'registro' %}">Registrarse</a>
+                </div>
+                <div class="col-md-4">
+                    <a href="{% url 'user-detail' %}">Consultar API</a>
+                </div>
+
+            </div>
+
+
+            <div id="div_result"></div>
+
+        {% endblock %}
+
+    </div>
+
+
+
+</body>
+
+{% block footer %}
+
+<footer> &copy Cinthya Ramos </footer>
+
+{% endblock %}
+
+</html>

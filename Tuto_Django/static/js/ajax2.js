@@ -1,8 +1,8 @@
 $(document).ready(function(){
-    $("button").click(function(){
+    $("#test-ajax").click(function(){
         $.ajax(
             {
-                url: "Home",
+                url: "resultado",
                 success: function(result){
                     $("#div_result").html(result);
                     console.log("Sucess");
