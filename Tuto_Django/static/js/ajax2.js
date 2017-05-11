@@ -2,7 +2,7 @@ $(document).ready(function(){
     $("button").click(function(){
         $.ajax(
             {
-                url: "static/js/hola.txt",
+                url: "Home",
                 success: function(result){
                     $("#div_result").html(result);
                     console.log("Sucess");
@@ -14,5 +14,3 @@ $(document).ready(function(){
             });
         });
     });
-
-

@@ -38,7 +38,10 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'Tutorial.apps.TutorialConfig',
+    'Tutorial_API',
     'bootstrap3',
+    'rest_framework',
+
 ]
 
 MIDDLEWARE = [
@@ -129,3 +132,10 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, "Tuto_Django/static"),
 )
+
+REST_FRAMEWORK = {
+    'DEFAULT_PERMISSION_CLASSES': [
+        'rest_framework.permissions.IsAdminUser',
+    ],
+    'PAGE_SIZE': 10
+}
