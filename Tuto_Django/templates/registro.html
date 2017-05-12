@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 
     {% block script %}
+        <script type="text/javascript" src="../static/js/ajax-api.js"></script>
     {% endblock %}
 
     {% block content %}
@@ -24,10 +25,12 @@
 
                 </div>
 
+                <button id="id_submit" name="button" type="submit"> Enviar Datos </button>
+
             </div>
 
-            <button id="id_submit" name="button" type="submit"> Enviar Datos </button>
-
         </form>
+
+        <a href="{% url 'home' %}"><button id="regresar"> Volver a la Página Principal </button></a>
 
     {% endblock %}

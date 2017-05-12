@@ -55,7 +55,7 @@ button {
 	margin-right: 10px;
 }
 
-button:hover , .ppal:hover {
+button:hover , .ppal:hover{
 	background: #BDBDBD;
 	border-color: #58D3F7;
 	border-style: solid;
@@ -126,6 +126,12 @@ a {
 	padding: 5px;
 	margin-left: 10px;
 	margin-right: 10px;
+}
+
+#regresar {
+	position: relative;
+    left: 20px;
+    top: 22px;
 }
 
 .title {

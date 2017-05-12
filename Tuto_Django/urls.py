@@ -26,6 +26,7 @@ urlpatterns = [
     url(r'^', include('Tutorial.urls')),
     url(r'^router/', include(router.urls)),
     url(r'^router/usuarios/',views.UsuarioViewSet,name='user-detail'),
+    url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework')),
 ]
 
 
