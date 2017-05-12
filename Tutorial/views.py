@@ -35,10 +35,25 @@ class Registro (FormView):
             user.email = post_values['email']
             user.save()
 
-            return HttpResponseRedirect(reverse_lazy('resultado'))
+            return HttpResponseRedirect(reverse_lazy('exitoso'))
         else:
             return render(request,'registro.html',{'form': form})
 
 
 class HomeExtra (TemplateView):
     template_name = 'resultado.html'
+
+
+class Exitoso (TemplateView):
+    template_name = 'exitoso.html'
+
+class VerUsuarios(TemplateView):
+    template_name = 'ver_usuarios.html'
+
+    def get_context_data(self, **kwargs):
+        context = super(
+            VerUsuarios, self).get_context_data(**kwargs)
+        usuarios = Usuarios.objects.all()
+        context['usuarios'] = usuarios
+        return context
+

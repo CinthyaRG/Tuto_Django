@@ -21,16 +21,16 @@
 
         {% block content %}
 
-            <div class="row" id="tabla">
+            <div class="row" id="menu">
 
                 <div class="col-md-4">
-                    <a href="#" id="test-ajax"> Pruebame! </a>
+                    <a class="menu" href="#" id="test-ajax"> Pruébame! </a>
                 </div>
                 <div class="col-md-4">
-                    <a href="{% url 'registro' %}">Registrarse</a>
+                    <a class="menu" href="{% url 'registro' %}">Registrarse</a>
                 </div>
                 <div class="col-md-4">
-                    <a href="{% url 'user-detail' %}">Consultar API</a>
+                    <a class="menu" href="{% url 'user-detail' %}">Consultar API</a>
                 </div>
 
             </div>
@@ -40,9 +40,10 @@
 
         {% endblock %}
 
+        {% block button %}
+        {% endblock %}
+
     </div>
-
-
 
 </body>
 

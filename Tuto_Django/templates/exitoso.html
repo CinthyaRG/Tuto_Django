@@ -1,0 +1,16 @@
+{% extends "resultado.html" %}
+
+    {% block content %}
+
+        <div>
+            <h2> Registro Exitoso! </h2>
+        </div>
+
+    {% endblock %}
+
+    {% block button %}
+        <a href="{% url 'registro' %}"><button> Volver a Registrar </button></a>
+        <a href="{% url 'ver_usuarios' %}"><button> Ver Usuarios Registrados </button></a>
+        <a href="{% url 'home' %}"><button> Volver a la Página Principal </button</a>
+    {% endblock %}
+    

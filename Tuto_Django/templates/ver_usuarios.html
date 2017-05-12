@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+
+    {% block script %}
+    {% endblock %}
+
+    {% block content %}
+
+        <h1> Usuarios Registrados </h1>
+
+            {% csrf_token %}
+
+            <div class="row">
+                
+
+                    <div>
+                        <table>
+                            <tr>
+                                <th class="title"> ID </th>
+                                <th class="title"> Nombre </th>
+                                <th class="title"> Apellido </th>
+                                <th class="title"> Email </th>
+                            </tr>
+                            {% for us in usuarios %}
+                            <tr>
+                                <th class="value"> {{us.id}} </th>
+                                <th class="value"> {{us.first_name}} </th>
+                                <th class="value"> {{us.last_name}} </th>
+                                <th class="value"> {{us.email}} </th>
+                            </tr>
+                            {% endfor %}
+
+                    </div>
+
+                
+
+            </div>
+
+        </form>
+
+        <div>
+          <a href="{% url 'home' %}"><button id="ppal"> Volver a la Página Principal </button></a>  
+        </div>
+
+
+    {% endblock %}
+
+    
